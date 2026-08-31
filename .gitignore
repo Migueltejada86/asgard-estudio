@@ -1,0 +1,10 @@
+# carpetas
+html_viejos/
+
+# zip
+*.zip
+
+# achivos
+.htaccess_3
+.htaccess*
+
