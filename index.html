@@ -3,15 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="ASGARD ESTUDIO | Barbería & Tattoo en Alta Gracia. Elevamos tu estilo. Cortes con detalle y tatuajes con esencia. Marcelo, Ulises y Alexis.">
-  <meta name="keywords" content="ASGARD ESTUDIO, barbería, tattoo, cortes de cabello, barba, perfilado, tatuajes, visajismo, reserva turno">
+  <meta name="description" content="ASGARD ESTUDIO | Barbería en Alta Gracia. Elevamos tu estilo. Cortes con detalle. Marcelo, Ulises y Alexis.">
+  <meta name="keywords" content="ASGARD ESTUDIO, barbería, cortes de cabello, barba, perfilado, reserva turno, Alta Gracia">
   <meta name="author" content="ASGARD ESTUDIO">
   <meta name="robots" content="index, follow">
-  <meta property="og:title" content="ASGARD ESTUDIO | Barbería & Tattoo">
-  <meta property="og:description" content="Elevamos tu estilo en Alta Gracia. Cortes con detalle y tatuajes con esencia. Somos un equipo, no solo una barbería.">
+  <meta property="og:title" content="ASGARD ESTUDIO | Barbería">
+  <meta property="og:description" content="Elevamos tu estilo en Alta Gracia. Cortes con detalle. Somos un equipo, no solo una barbería.">
   <meta property="og:type" content="website">
   <meta property="og:locale" content="es_ES">
-  <title>ASGARD ESTUDIO | Barbería & Tattoo</title>
+  <title>ASGARD ESTUDIO | Barbería</title>
 
   <meta http-equiv="X-Frame-Options" content="DENY">
   <meta http-equiv="X-Content-Type-Options" content="nosniff">
@@ -146,6 +146,14 @@
     .form-group textarea { resize: vertical; min-height: 90px; }
     .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
     .btn-submit { width: 100%; margin-top: 10px; }
+    .barber-picks { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-top: 10px; }
+    .barber-pick { min-height: 64px; padding: 12px 8px; border: 1px solid var(--border); border-radius: 4px; background: var(--bg-elevated); color: var(--accent-light); font-family: 'Cinzel', serif; font-size: 15px; letter-spacing: 1px; cursor: pointer; width: 100%; }
+    .barber-pick:hover:not(:disabled) { border-color: var(--accent); }
+    .barber-pick.selected { border-color: var(--accent); background: rgba(201,168,108,0.18); color: var(--accent); }
+    .barber-pick:disabled { opacity: 0.35; cursor: not-allowed; }
+    .barber-pick small { display: block; margin-top: 4px; font-family: 'Inter', sans-serif; font-size: 10px; letter-spacing: 0.5px; color: var(--text-muted); }
+    #barbero { font-size: 16px; color: var(--accent-light); }
+    .slot-note { font-size: 12px; color: var(--text-muted); margin-top: 8px; line-height: 1.4; }
 
     footer { background: #050505; border-top: 1px solid rgba(201,168,108,0.12); padding: 50px 24px 28px; }
     .footer-content { max-width: 1100px; margin: 0 auto; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 24px; }
@@ -186,6 +194,7 @@
       .about-features { gap: 16px; flex-direction: column; align-items: center; }
       .form-row { grid-template-columns: 1fr; }
       .booking-form { padding: 28px 18px; }
+      .barber-picks { grid-template-columns: 1fr; }
       .footer-content { flex-direction: column; text-align: center; }
       .footer-links { flex-wrap: wrap; justify-content: center; gap: 16px; }
       .footer-logo img { height: 42px; }
@@ -225,10 +234,10 @@
   <section class="hero" id="inicio">
     <div class="hero-content">
       <div class="hero-logo"><img src="img/logo-asgard-rb1.png" alt="ASGARD ESTUDIO"></div>
-      <h1 class="hero-title">ASGARD</h1>
-      <p class="hero-subtitle">ESTUDIO</p>
-      <div class="hero-tags"><span>Corte</span><span>Barba</span><span>Perfilado</span><span>Tattoo</span></div>
-      <p class="hero-desc">Elevamos tu estilo en Alta Gracia.<br>Cortes con detalle · Tatuajes con esencia.</p>
+      <h1 class="hero-title"></h1>
+      <p class="hero-subtitle"></p>
+      <div class="hero-tags"><span>Corte</span><span>Barba</span><span>Perfilado</span></div>
+      <p class="hero-desc">Elevamos tu estilo en Alta Gracia.<br>Cortes con detalle · Tres barberos, un mismo criterio.</p>
       <div class="hero-buttons">
         <a href="#reservar" class="btn btn-primary">Reservar Turno <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
         <a href="#servicios" class="btn btn-outline">Ver Servicios</a>
@@ -246,13 +255,12 @@
       <div class="section-header">
         <span class="section-label">Servicios</span>
         <h2 class="section-title">Lo que ofrecemos</h2>
-        <p class="section-desc">Cortes, estilo y tatuajes en un mismo lugar. Un equipo que asesora para que el corte te quede bien a vos.</p>
+        <p class="section-desc">Cortes y estilo en un mismo lugar. Un equipo que asesora para que el corte te quede bien a vos.</p>
       </div>
       <div class="services-grid">
         <article class="service-card"><div class="service-icon">✂</div><h3>Corte</h3><p>No es solo cortar el pelo: escuchamos, asesoramos y cuidamos cada detalle para que te represente.</p><div class="service-price">Consultar</div></article>
         <article class="service-card"><div class="service-icon">🧔</div><h3>Barba</h3><p>Detalle fino para un look impecable. Cada cliente es único y lo tratamos así.</p><div class="service-price">Consultar</div></article>
         <article class="service-card"><div class="service-icon">✦</div><h3>Perfilado</h3><p>Líneas precisas y contornos limpios. El detalle que hace la diferencia.</p><div class="service-price">Consultar</div></article>
-        <article class="service-card"><div class="service-icon">🕶</div><h3>Tattoo</h3><p>Tatuajes con esencia. Diseños personalizados con la misma dedicación que en cada corte.</p><div class="service-price">Consultar</div></article>
       </div>
     </div>
   </section>
@@ -296,7 +304,7 @@
         <div class="about-features">
           <div class="feature"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>Asesoramiento</div>
           <div class="feature"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>Detalle fino</div>
-          <div class="feature"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>Barbería + Tattoo</div>
+          <div class="feature"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>Marcelo · Ulises · Alexis</div>
         </div>
       </div>
     </div>
@@ -330,18 +338,33 @@
         </div>
         <div class="booking-form">
           <h3>Reservar Turno</h3>
-          <p>Completá los datos y te confirmamos por WhatsApp.</p>
+          <p>Elegí barbero, fecha y horario. Un barbero = un turno a la vez. Máximo 3 turnos por horario.</p>
           <form id="bookingForm" onsubmit="return handleSubmit(event)">
             <div class="form-group"><label for="nombre">Nombre completo</label><input type="text" id="nombre" name="nombre" required placeholder="Tu nombre" maxlength="80" autocomplete="name"></div>
+            <div class="form-group">
+              <label for="barbero">Barbero</label>
+              <select id="barbero" name="barbero" required>
+                <option value="">Elegí barbero</option>
+                <option value="Marcelo">Marcelo</option>
+                <option value="Ulises">Ulises</option>
+                <option value="Alexis">Alexis</option>
+              </select>
+              <div class="barber-picks" id="barberPicks">
+                <button type="button" class="barber-pick" data-barbero="Marcelo">Marcelo<small>Disponible</small></button>
+                <button type="button" class="barber-pick" data-barbero="Ulises">Ulises<small>Disponible</small></button>
+                <button type="button" class="barber-pick" data-barbero="Alexis">Alexis<small>Disponible</small></button>
+              </div>
+              <p class="slot-note" id="slotNote">Marcelo, Ulises o Alexis. Un barbero no puede tener dos turnos a la misma hora.</p>
+            </div>
             <div class="form-row">
               <div class="form-group"><label for="telefono">WhatsApp</label><input type="tel" id="telefono" name="telefono" required placeholder="+54 9 3547 61-2770" maxlength="25" inputmode="tel" autocomplete="tel"></div>
-              <div class="form-group"><label for="servicio">Servicio</label><select id="servicio" name="servicio" required><option value="">Elegí un servicio</option><option value="corte">Corte</option><option value="barba">Barba</option><option value="perfilado">Perfilado</option><option value="combo">Corte + Barba</option><option value="tattoo">Tattoo</option></select></div>
+              <div class="form-group"><label for="servicio">Servicio</label><select id="servicio" name="servicio" required><option value="">Elegí un servicio</option><option value="corte">Corte</option><option value="barba">Barba</option><option value="perfilado">Perfilado</option><option value="combo">Corte + Barba</option></select></div>
             </div>
             <div class="form-row">
               <div class="form-group"><label for="fecha">Fecha preferida</label><input type="date" id="fecha" name="fecha" required></div>
-              <div class="form-group"><label for="hora">Horario</label><select id="hora" name="hora" required><option value="">Elegí horario</option><optgroup label="Mañana"><option value="09:00">09:00</option><option value="10:00">10:00</option><option value="11:00">11:00</option><option value="12:00">12:00</option></optgroup><optgroup label="Tarde"><option value="17:00">17:00</option><option value="18:00">18:00</option><option value="19:00">19:00</option><option value="20:00">20:00</option><option value="21:00">21:00</option></optgroup></select></div>
+              <div class="form-group"><label for="hora" id="horaLabel">Horario</label><select id="hora" name="hora" required><option value="">Elegí horario</option><optgroup label="Mañana"><option value="09:00">09:00</option><option value="09:30">09:30</option><option value="10:00">10:00</option><option value="10:30">10:30</option><option value="11:00">11:00</option><option value="11:30">11:30</option><option value="12:00">12:00</option><option value="12:30">12:30</option></optgroup><optgroup label="Tarde"><option value="17:00">17:00</option><option value="17:30">17:30</option><option value="18:00">18:00</option><option value="18:30">18:30</option><option value="19:00">19:00</option><option value="19:30">19:30</option><option value="20:00">20:00</option><option value="20:30">20:30</option><option value="21:00">21:00</option></optgroup></select></div>
             </div>
-            <div class="form-group"><label for="mensaje">Comentario (opcional)</label><textarea id="mensaje" name="mensaje" placeholder="Preferencias, diseño de tattoo, etc." maxlength="500"></textarea></div>
+            <div class="form-group"><label for="mensaje">Comentario (opcional)</label><textarea id="mensaje" name="mensaje" placeholder="Preferencias de corte, etc." maxlength="500"></textarea></div>
             <button type="submit" class="btn btn-primary btn-submit">Enviar Reserva <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></button>
           </form>
         </div>
@@ -360,7 +383,7 @@
         <li><a href="#contacto">Contacto</a></li>
       </ul>
     </div>
-    <div class="footer-copy">© 2026 ASGARD ESTUDIO — Barbería & Tattoo. Todos los derechos reservados.</div>
+    <div class="footer-copy">© 2026 ASGARD ESTUDIO — Barbería. Todos los derechos reservados.</div>
   </footer>
 
   <script>
@@ -382,6 +405,84 @@
       return String(str || '').replace(/[^0-9+\s\-()]/g, '').trim().slice(0, 25);
     }
 
+    const BARBEROS = ['Marcelo', 'Ulises', 'Alexis'];
+    const TURNOS_KEY = 'asgard-turnos-v1';
+
+    function loadTurnos() {
+      try {
+        const raw = localStorage.getItem(TURNOS_KEY);
+        const data = raw ? JSON.parse(raw) : [];
+        return Array.isArray(data) ? data : [];
+      } catch (err) { return []; }
+    }
+    function saveTurnos(list) {
+      localStorage.setItem(TURNOS_KEY, JSON.stringify(list.slice(-400)));
+    }
+    function slotKey(fecha, hora) { return fecha + '|' + hora; }
+    function ocupadosEn(fecha, hora) {
+      return loadTurnos().filter(function (t) { return t.fecha === fecha && t.hora === hora; });
+    }
+    function barberoOcupado(fecha, hora, barbero) {
+      return ocupadosEn(fecha, hora).some(function (t) { return t.barbero === barbero; });
+    }
+
+    function refreshDisponibilidad() {
+      const fecha = document.getElementById('fecha').value;
+      const horaSel = document.getElementById('hora');
+      const barberoInput = document.getElementById('barbero');
+      const note = document.getElementById('slotNote');
+      const picks = document.querySelectorAll('.barber-pick');
+
+      Array.from(horaSel.options).forEach(function (opt) {
+        if (!opt.value || !fecha) { opt.disabled = false; return; }
+        opt.disabled = ocupadosEn(fecha, opt.value).length >= BARBEROS.length;
+      });
+      if (horaSel.value && horaSel.selectedOptions[0] && horaSel.selectedOptions[0].disabled) {
+        horaSel.value = '';
+        barberoInput.value = '';
+      }
+
+      const hora = horaSel.value;
+      picks.forEach(function (btn) {
+        const name = btn.getAttribute('data-barbero');
+        const taken = !!(fecha && hora && barberoOcupado(fecha, hora, name));
+        btn.disabled = taken;
+        btn.classList.toggle('taken', taken);
+        const small = btn.querySelector('small');
+        if (small) small.textContent = taken ? 'Ocupado' : 'Disponible';
+        if (taken && barberoInput.value === name) {
+          barberoInput.value = '';
+        }
+        btn.classList.toggle('selected', !taken && barberoInput.value === name);
+      });
+
+      if (!fecha || !hora) {
+        note.textContent = 'Elegí fecha y horario. Cada barbero atiende un cliente por horario. Máximo 3 turnos a la misma hora.';
+        return;
+      }
+      const taken = ocupadosEn(fecha, hora);
+      const libres = BARBEROS.length - taken.length;
+      if (libres <= 0) note.textContent = 'Ese horario está completo (los 3 barberos ocupados). Elegí otro.';
+      else note.textContent = libres + ' lugar' + (libres === 1 ? '' : 'es') + ' en ese horario. No se pisa el mismo barbero.';
+    }
+
+    document.querySelectorAll('.barber-pick').forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        if (btn.disabled) return;
+        var name = btn.getAttribute('data-barbero');
+        document.getElementById('barbero').value = name;
+        document.querySelectorAll('.barber-pick').forEach(function (b) { b.classList.toggle('selected', b === btn); });
+      });
+    });
+    document.getElementById('barbero').addEventListener('change', function () {
+      var v = this.value;
+      document.querySelectorAll('.barber-pick').forEach(function (b) {
+        b.classList.toggle('selected', b.getAttribute('data-barbero') === v);
+      });
+    });
+    document.getElementById('fecha').addEventListener('change', refreshDisponibilidad);
+    document.getElementById('hora').addEventListener('change', refreshDisponibilidad);
+
     function handleSubmit(e) {
       e.preventDefault();
       const nombre = sanitizeInput(document.getElementById('nombre').value);
@@ -389,13 +490,24 @@
       const servicio = sanitizeInput(document.getElementById('servicio').value);
       const fecha = sanitizeInput(document.getElementById('fecha').value);
       const hora = sanitizeInput(document.getElementById('hora').value);
+      const barbero = sanitizeInput(document.getElementById('barbero').value);
       const mensaje = sanitizeInput(document.getElementById('mensaje').value);
-      if (!nombre || !telefono || !servicio || !fecha || !hora) { alert('Por favor completá todos los campos obligatorios.'); return false; }
+      if (!nombre || !telefono || !servicio || !fecha || !hora || !barbero) { alert('Completá nombre, WhatsApp, servicio, barbero, fecha y horario.'); return false; }
+      if (BARBEROS.indexOf(barbero) === -1) { alert('Elegí un barbero del equipo.'); return false; }
       if (new Date(fecha) < new Date(new Date().setHours(0,0,0,0))) { alert('Elegí una fecha futura.'); return false; }
+      if (barberoOcupado(fecha, hora, barbero)) { alert(barbero + ' ya tiene un turno a las ' + hora + '. Elegí otro barbero u otro horario.'); refreshDisponibilidad(); return false; }
+      if (ocupadosEn(fecha, hora).length >= BARBEROS.length) { alert('Ese horario ya tiene 3 turnos (uno por barbero).'); refreshDisponibilidad(); return false; }
+
+      const turnos = loadTurnos();
+      turnos.push({ fecha: fecha, hora: hora, barbero: barbero, at: Date.now() });
+      saveTurnos(turnos);
+      refreshDisponibilidad();
+
       let text = 'Hola ASGARD ESTUDIO! Quiero reservar un turno:\n\n';
       text += 'Nombre: ' + nombre + '\n';
       text += 'Tel: ' + telefono + '\n';
       text += 'Servicio: ' + servicio + '\n';
+      text += 'Barbero: ' + barbero + '\n';
       text += 'Fecha: ' + fecha + '\n';
       text += 'Hora: ' + hora;
       if (mensaje) text += '\nNota: ' + mensaje;
@@ -405,6 +517,7 @@
       return false;
     }
     document.getElementById('fecha').setAttribute('min', new Date().toISOString().split('T')[0]);
+    refreshDisponibilidad();
 
     // CAROUSEL
     const track = document.getElementById('carouselTrack');
