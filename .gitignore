@@ -1,10 +1,8 @@
-# carpetas
 html_viejos/
-
-# zip
+web2/
+webapp_puntaje/
+node_modules/
 *.zip
-
-# achivos
-.htaccess_3
 .htaccess*
-
+pendientes.md
+.DS_Store
